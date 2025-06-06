@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.opt.clipboard = "" -- Disables yank to system clipboard
+vim.opt.foldmethod = "manual"
