@@ -5,3 +5,5 @@
 if vim.fn.has("mac") == 1 then
   vim.opt.clipboard = "" -- Disables yank to system clipboard
 end
+
+vim.opt.foldmethod = "manual"
