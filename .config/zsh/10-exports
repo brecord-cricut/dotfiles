@@ -1,0 +1,27 @@
+#!/usr/bin/env zsh
+
+if [[ $(uname) == "Linux" ]]; then
+  export XDG_CACHE_HOME="$HOME/.cache"
+  export XDG_CONFIG_HOME="$HOME/.config"
+  export XDG_DATA_HOME="$HOME/.local/share"
+  export XDG_STATE_HOME="$HOME/.local/state"
+  export XDG_DATA_DIRS="${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+  export XDG_DATA_DIRS="$XDG_DATA_HOME:$XDG_DATA_DIRS"
+fi
+
+export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+export REPOS="$HOME/.local/share/repos"
+
+export CARGO_HOME="$HOME/.cache/cargo"
+export CMAKE_PREFIX_PATH="$HOME/.local"
+export CUDA_CACHE_PATH="$HOME/.cache/nv"
+export DOCKER_CONFIG="$HOME/.config"/docker
+export GNUPGHOME="$HOME/.config/gnupg"
+export GOMODCACHE="$HOME/.cache/go/mod"
+export GOPATH="$HOME/.local/share/go"
+export NPM_CONFIG_USERCONFIG="$HOME/.config/npmrc"
+export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
+export ZSH="$HOME/.local/share/oh-my-zsh"
+export ZSH_CUSTOM="$HOME/.config/zsh/custom"
+
+[[ -d $HOME/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"

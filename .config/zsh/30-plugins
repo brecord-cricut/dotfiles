@@ -1,0 +1,30 @@
+#!/usr/bin/env zsh
+
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+
+function ensure_installed() {
+  local plugin_name=$1
+  local plugin_repo=$2
+  local plugin_path="${ZSH_CUSTOM}/plugins/${plugin_name}"
+
+  if [ ! -d "$plugin_path" ]; then
+    echo "Installing ZSH plugin: $plugin_name"
+    git clone "$plugin_repo" "$plugin_path" || echo "Failed to clone $plugin_name"
+  fi
+}
+
+ensure_installed fast-syntax-highlighting https://github.com/zdharma-continuum/fast-syntax-highlighting.git
+ensure_installed zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions.git
+ensure_installed zsh-syntax-highlighting https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+plugins=(
+  copybuffer
+  copyfile
+  dirhistory
+  fast-syntax-highlighting
+  git
+  vi-mode
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)

@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+[ -d "$HOME/.local/state/zsh" ] || mkdir -p "$HOME/.local/state/zsh"
+[ -d "$HOME/.cache/zsh" ] || mkdir -p "$HOME/.cache/zsh"
+
+HISTFILE="$HOME/.cache/zsh/zsh_history"
+HISTSIZE=10000
+SAVEHIST=1000
+bindkey -v
+
+zstyle :compinstall filename "$HOME/.zshrc"
+
+autoload -Uz compinit
+compinit
