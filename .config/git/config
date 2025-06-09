@@ -1,0 +1,23 @@
+[core]
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[alias]
+  logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[pull]
+  rebase = true
+
+[fetch]
+  prune = true
