@@ -1,0 +1,30 @@
+[core]
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[init]
+	defaultBranch = main
+
+[user]
+	email = brecord@cricut.com
+	name = Ben Record
+
+[alias]
+	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[pull]
+	ff = only
+	rebase = true
+[fetch]
+	prune = true
