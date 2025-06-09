@@ -1,0 +1,14 @@
+os:
+  edit: 'nvim -c "lua vim.fn.chdir(\"$(dirname {{filename}})\")" -c "let g:block_session=1" {{filename}}'
+  editAtLine: 'nvim +{{line}} -c "lua vim.fn.chdir(\"$(dirname {{filename}})\")" -c "let g:block_session=1" {{filename}}'
+  editPreset: 'nvim -c "lua vim.fn.chdir(\"$(dirname {{filename}})\")" -c "let g:block_session=1" {{filename}}'
+
+gui:
+  theme:
+    selectedLineBgColor:
+      - reverse
+
+git:
+  paging:
+    colorArg: never
+    pager: delta --dark --paging=never --tabs=2
