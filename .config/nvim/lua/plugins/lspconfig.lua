@@ -2,6 +2,9 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     inlay_hints = { enabled = false },
+    servers = {
+      bashls = {},
+    },
   },
   keys = function()
     local lsp_clients_popup = require("custom.lsp.utils").lsp_clients_popup
