@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-alias aliases="cd $XDG_CONFIG_HOME/zsh && $EDITOR custom/aliases.zsh && source $XDG_CONFIG_HOME/zsh/custom/aliases.zsh; cd -"
+alias aliases="cd $XDG_CONFIG_HOME/zsh && $EDITOR custom/aliases.zsh && source $HOME/.zshrc; cd -"
 alias dflg="$HOMEBREW_PREFIX/bin/lazygit --git-dir=$XDG_DATA_HOME/repos/dotfiles --work-tree=$HOME"
 alias dotfiles="/usr/bin/git --git-dir=$XDG_DATA_HOME/repos/dotfiles --work-tree=$HOME"
 alias lg="$HOMEBREW_PREFIX/bin/lazygit"
