@@ -2,8 +2,10 @@ return {
   "mfussenegger/nvim-dap",
   event = "VeryLazy",
   opts = function()
-    require("dap").adapters = {
+    local dap = require("dap")
+    dap.adapters = {
       lldb = require("plugins.dap.lldb"),
+      python = require("plugins.dap.python"),
     }
   end,
 
@@ -37,7 +39,7 @@ return {
       { "<Leader>dp", hover, desc = "Dap Preview", mode = { "n", "v" } },
       { "<Leader>dp", hover, desc = "Dap Preview", mode = { "n", "v" } },
       { "<Leader>ds", cf_scopes, desc = "Dap Scopes" },
-      { "<Leader>dt", terminate, desc = "Dap Continue with Args" },
+      { "<Leader>dt", terminate, desc = "Dap Terminate" },
       { "<Leader>dU", reset_ui, desc = "Dap UI Reset" },
       { "<F5>", continue, desc = "Dap Continue" },
       { "<F10>", step_over, desc = "Dap Step Over" },
